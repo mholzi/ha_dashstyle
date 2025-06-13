@@ -23,7 +23,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     # Register static files for the frontend
     hass.http.register_static_path(
-        "/hacsfiles/ha_dashstyle",
+        "/ha_dashstyle_frontend",
         hass.config.path("custom_components/ha_dashstyle/frontend"),
         cache_headers=False,
     )
@@ -34,7 +34,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         "Dashstyle",
         "mdi:view-dashboard",
         frontend_url_path="ha-dashstyle",
-        config={"url": "/hacsfiles/ha_dashstyle/index.html"},
+        config={"url": "/ha_dashstyle_frontend/index.html"},
     )
 
     # Set up API views
