@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HA Dashstyle</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="app">
+        <div class="dashboard-container">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <h1 class="dashboard-title">Home Dashboard</h1>
+                    <div class="header-actions">
+                        <button id="admin-btn" class="admin-button" onclick="toggleAdminMode()">
+                            <span class="icon">⚙️</span>
+                            Admin
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="dashboard-main">
+                <!-- Floor Navigation -->
+                <div class="floor-navigation">
+                    <div class="floor-tabs">
+                        <button class="floor-tab active" data-floor="EG">
+                            <span class="floor-icon">🏠</span>
+                            <span class="floor-name">EG</span>
+                        </button>
+                        <button class="floor-tab" data-floor="OG">
+                            <span class="floor-icon">🏠</span>
+                            <span class="floor-name">OG</span>
+                        </button>
+                        <button class="floor-tab" data-floor="Keller">
+                            <span class="floor-icon">⬇️</span>
+                            <span class="floor-name">Keller</span>
+                        </button>
+                        <button class="floor-tab" data-floor="Außen">
+                            <span class="floor-icon">🌳</span>
+                            <span class="floor-name">Außen</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Room Grid -->
+                <div class="room-grid" id="room-grid">
+                    <!-- Rooms will be populated by JavaScript -->
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="quick-action" onclick="toggleAllLights()">
+                        <span class="icon">💡</span>
+                        All Lights
+                    </button>
+                    <button class="quick-action" onclick="activateSecurityMode()">
+                        <span class="icon">🔒</span>
+                        Security
+                    </button>
+                    <button class="quick-action" onclick="showMusicControl()">
+                        <span class="icon">🎵</span>
+                        Music
+                    </button>
+                    <button class="quick-action" onclick="showClimateControl()">
+                        <span class="icon">🌡️</span>
+                        Climate
+                    </button>
+                </div>
+            </main>
+        </div>
+
+        <!-- Admin Panel -->
+        <div id="admin-panel" class="admin-panel hidden">
+            <div class="admin-content">
+                <div class="admin-header">
+                    <h2>Admin Configuration</h2>
+                    <button class="close-btn" onclick="toggleAdminMode()">×</button>
+                </div>
+                
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-tab="rooms">Rooms</button>
+                    <button class="admin-tab" data-tab="entities">Entities</button>
+                    <button class="admin-tab" data-tab="themes">Themes</button>
+                </div>
+
+                <div class="admin-tab-content">
+                    <!-- Rooms Tab -->
+                    <div id="rooms-tab" class="tab-content active">
+                        <h3>Room Configuration</h3>
+                        <div class="room-config">
+                            <!-- Room configuration will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Entities Tab -->
+                    <div id="entities-tab" class="tab-content">
+                        <h3>Entity Classification</h3>
+                        <div class="entity-config">
+                            <!-- Entity configuration will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Themes Tab -->
+                    <div id="themes-tab" class="tab-content">
+                        <h3>Theme & Styling</h3>
+                        <div class="theme-config">
+                            <div class="color-scheme">
+                                <label>Primary Color:</label>
+                                <input type="color" id="primary-color" value="#1976d2">
+                            </div>
+                            <div class="color-scheme">
+                                <label>Accent Color:</label>
+                                <input type="color" id="accent-color" value="#ff9800">
+                            </div>
+                            <div class="color-scheme">
+                                <label>Background Color:</label>
+                                <input type="color" id="background-color" value="#fafafa">
+                            </div>
+                            <div class="font-settings">
+                                <label>Font Family:</label>
+                                <select id="font-family">
+                                    <option value="'Roboto', sans-serif">Roboto</option>
+                                    <option value="'Open Sans', sans-serif">Open Sans</option>
+                                    <option value="'Lato', sans-serif">Lato</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-actions">
+                    <button class="save-btn" onclick="saveConfiguration()">Save Configuration</button>
+                    <button class="reset-btn" onclick="resetConfiguration()">Reset to Default</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

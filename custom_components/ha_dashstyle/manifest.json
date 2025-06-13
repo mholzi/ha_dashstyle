@@ -1,0 +1,13 @@
+{
+  "domain": "ha_dashstyle",
+  "name": "HA Dashstyle",
+  "version": "1.0.0",
+  "config_flow": true,
+  "dependencies": [],
+  "requirements": [],
+  "iot_class": "local_push",
+  "integration_type": "system",
+  "documentation": "https://github.com/mholzi/ha_dashstyle",
+  "issue_tracker": "https://github.com/mholzi/ha_dashstyle/issues",
+  "codeowners": ["@mholzi"]
+}
