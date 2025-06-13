@@ -6,7 +6,7 @@
   "dependencies": [],
   "requirements": [],
   "iot_class": "local_push",
-  "integration_type": "system",
+  "integration_type": "integration",
   "documentation": "https://github.com/mholzi/ha_dashstyle",
   "issue_tracker": "https://github.com/mholzi/ha_dashstyle/issues",
   "codeowners": ["@mholzi"]
