@@ -1,0 +1,7 @@
+{
+  "name": "HA Dashstyle",
+  "hacs": "1.6.0",
+  "domains": ["ha_dashstyle"],
+  "iot_class": "Local Push",
+  "homeassistant": "2023.1.0"
+}

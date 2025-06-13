@@ -1,0 +1,34 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "HA Dashstyle Setup",
+        "description": "Configure your HA Dashstyle dashboard",
+        "data": {
+          "name": "Dashboard Name",
+          "include_admin": "Include Admin Panel"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "Dashboard is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "HA Dashstyle Options",
+        "description": "Configure dashboard options",
+        "data": {
+          "name": "Dashboard Name",
+          "include_admin": "Include Admin Panel"
+        }
+      }
+    }
+  }
+}
